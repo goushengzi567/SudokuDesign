@@ -14,7 +14,7 @@ import java.util.*;
     int[][] s = new int[9][9];
     int x, y;
     Scanner sc = new Scanner(System.in);
-    public void input(){
+    public int[][] input(){
     System.out.println("Enter anything to start. Enter 0 if finished");
      do{
         System.out.print("Please enter the x coordinate: "); 
@@ -33,7 +33,7 @@ import java.util.*;
        for(int j=0;j<9;j++){
        System.out.print(s[i][j]+"  ");
        }System.out.println();
-     }
+     }return s;
     }
  }
 public class SudokuDesign {
@@ -42,7 +42,19 @@ public class SudokuDesign {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     new SudokuInput().input();
+     int[][] s = new SudokuInput().input();
+     
+     
     }
+   public void select(int[][] s){
+   HashSet<Integer> set1 = new HashSet<Integer>();
+   HashSet<Integer> set2 = new HashSet<Integer>();
+   HashSet<Integer> set3 = new HashSet<Integer>();
+  // create a set containing 1 to 9;
+   HashSet<Integer> set = new HashSet<Integer>();
+   int[] All = {1,2,3,4,5,6,7,8,9};
+   for(int i:All) set.add(i);
    
+   
+   }
 }
